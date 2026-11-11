@@ -1,0 +1,23 @@
+# Audio
+ro.vendor.mtk_audio_tuning_tool_ver    u:object_r:vendor_audio_prop:s0
+
+# Camera
+ro.vendor.camera.                       u:object_r:vendor_camera_prop:s0
+ro.vendor.camera3.                      u:object_r:vendor_camera_prop:s0
+vendor.camera.mdp.                      u:object_r:vendor_camera_prop:s0
+persist.vendor.camera3.pipeline.        u:object_r:vendor_camera_prop:s0
+
+# Media
+ro.vendor.mtk.c2.vdec.                  u:object_r:vendor_media_prop:s0
+vendor.mtk.vdec.                        u:object_r:vendor_media_prop:s0
+vendor.media.omx                        u:object_r:vendor_media_prop:s0
+vendor.mtk_thumbnail_optimization       u:object_r:vendor_media_prop:s0
+vendor.video.framework.thumbnail.       u:object_r:vendor_media_prop:s0
+
+# Telephony
+ro.vendor.mtk_data_config               u:object_r:vendor_telephony_prop:s0
+ro.vendor.mtk_sim_hot_swap_common_slot  u:object_r:vendor_telephony_prop:s0
+ro.vendor.mtk_thin_md_telephony_support_mode u:object_r:vendor_telephony_prop:s0
+ro.vendor.mtk_world_phone_policy        u:object_r:vendor_telephony_prop:s0
+vendor.rild.libpath                     u:object_r:vendor_telephony_prop:s0
+vendor.rild.libargs                     u:object_r:vendor_telephony_prop:s0

@@ -1,0 +1,2 @@
+r_dir_file(system_server, sysfs_vibrator)
+allow system_server mtk_hal_mali_platform_default_service:service_manager find;

@@ -1,0 +1,14 @@
+# Charger
+type vendor_sysfs_charger, fs_type, sysfs_type;
+
+# Audio
+type vendor_sysfs_audio, fs_type, sysfs_type;
+
+# Touch
+type vendor_sysfs_touch, fs_type, sysfs_type;
+
+# Display
+type vendor_sysfs_graphics, fs_type, sysfs_type;
+
+# Camera
+type vendor_imgsys_dump_file, file_type, data_file_type;

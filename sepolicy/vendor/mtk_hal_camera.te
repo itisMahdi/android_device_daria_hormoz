@@ -1,0 +1,11 @@
+get_prop(mtk_hal_camera, camera_config_prop)
+
+# camerahalserver reads vendor camera props
+get_prop(mtk_hal_camera, vendor_camera_prop)
+
+# imgsys daemon
+allow mtk_hal_camera vendor_imgsys_dump_file:dir rw_dir_perms;
+allow mtk_hal_camera vendor_imgsys_dump_file:file create_file_perms;
+
+# camerahalserver
+allow mtk_hal_camera vendor_data_file:file r_file_perms;

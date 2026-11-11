@@ -1,0 +1,32 @@
+# Audio
+genfscon sysfs /fsm_drv    u:object_r:vendor_sysfs_audio:s0
+
+# Battery
+genfscon sysfs /devices/platform/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@34:mtk-gauge/power_supply    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@34:chg/power_supply          u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11280000.i2c/i2c-6/6-0030/power_supply                                      u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11cc2000.i2c/i2c-12/12-0064/power_supply                                    u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11f00000.i2c/i2c-3/3-006a/power_supply/primary_dvchg                       u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11cc3000.i2c/i2c-13/13-006a/power_supply/secondary_dvchg                    u:object_r:sysfs_batteryinfo:s0
+
+# Charger
+genfscon sysfs /devices/platform/charger    u:object_r:vendor_sysfs_charger:s0
+
+# Touch
+genfscon sysfs /devices/platform/goodix_ts.0    u:object_r:vendor_sysfs_touch:s0
+genfscon sysfs /devices/platform/goodix_ts.0/wakeup    u:object_r:sysfs_wakeup:s0
+
+# Vibrator
+genfscon sysfs /devices/platform/11d01000.i2c/i2c-1/1-005a/leds/vibrator    u:object_r:sysfs_vibrator:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/11f00000.i2c/i2c-3/3-006a/power_supply/primary_dvchg/wakeup28    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11cc3000.i2c/i2c-13/13-006a/power_supply/secondary_dvchg/wakeup29 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1cc04000.spmi/spmi-0/0-06/wakeup    u:object_r:sysfs_wakeup:s0
+
+# Memory
+genfscon proc /sys/vm/lowmem_reserve_ratio    u:object_r:proc_watermark_boost_factor:s0
+genfscon proc /sys/vm/min_free_kbytes         u:object_r:proc_watermark_boost_factor:s0
+
+# HBM
+genfscon sysfs /devices/platform/soc/1400d000.dsi/hbm u:object_r:vendor_sysfs_graphics:s0

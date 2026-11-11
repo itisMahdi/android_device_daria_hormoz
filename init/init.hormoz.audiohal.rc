@@ -1,0 +1,3 @@
+on post-fs-data
+    mkdir /data/vendor/audiohal 0771 system audio
+    mkdir /data/vendor/audiohal/audio_param 0771 system audio

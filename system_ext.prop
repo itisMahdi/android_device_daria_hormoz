@@ -1,0 +1,31 @@
+# Audio
+ro.audio.silent=0
+ro.audio.flinger_standbytime_ms=1000
+ro.audio.usb.period_us=16000
+ro.camera.sound.forced=0
+
+# Camera
+ro.camera.notify_nfc=1
+vendor.debug.camera.single_main2=1
+
+# Display
+sys.brightness.disable_gamma_conversion=true
+
+# Radio
+ro.vendor.mtk_gwsd_capability=2
+ro.vendor.mtk_gwsd_support=1
+ro.vendor.mtk_telephony_add_on_policy=0
+ro.vendor.vodata_support=1
+persist.vendor.mtk_rcs_single_reg_support=1
+persist.vendor.mtk.vilte.enable=1
+persist.vendor.pco5.radio.ctrl=0
+vendor.rild.libargs=-d /dev/ttyC0
+vendor.rild.libpath=mtk-ril.so
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# WiFi
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0

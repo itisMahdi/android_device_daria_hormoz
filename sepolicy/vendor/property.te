@@ -1,0 +1,11 @@
+# Audio
+vendor_public_prop(vendor_audio_prop)
+
+# Camera
+vendor_public_prop(vendor_camera_prop)
+
+# Media
+vendor_public_prop(vendor_media_prop)
+
+# Telephony
+vendor_public_prop(vendor_telephony_prop)

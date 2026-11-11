@@ -1,0 +1,53 @@
+From 86f5c1a86d0d02c8a5c01f875bc3eef5b09f8169 Mon Sep 17 00:00:00 2001
+From: itisMahdi <4811mahdi@gmail.com>
+Date: Mon, 5 Oct 2026 21:12:27 +0000
+Subject: [PATCH] ImsService: Export receivers that aren't exclusively for
+ system broadcasts
+
+---
+ smali/com/mediatek/ims/ImsConfigManager.smali        | 4 +++-
+ smali/com/mediatek/wfo/impl/ImsLocationHandler.smali | 6 ++++--
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/smali/com/mediatek/ims/ImsConfigManager.smali b/smali/com/mediatek/ims/ImsConfigManager.smali
+index f65e5a5..7bcf73f 100644
+--- a/smali/com/mediatek/ims/ImsConfigManager.smali
++++ b/smali/com/mediatek/ims/ImsConfigManager.smali
+@@ -207,7 +207,9 @@
+     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+ 
+     .line 155
+-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v2, 0x2
++
++    invoke-virtual {p1, v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     .line 157
+     return-void
+diff --git a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
+index 6286da2..4b70aa0 100644
+--- a/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
++++ b/smali/com/mediatek/wfo/impl/ImsLocationHandler.smali
+@@ -5175,7 +5175,7 @@
+ .end method
+ 
+ .method private registerForBroadcast()V
+-    .locals 3
++    .locals 4
+ 
+     .line 1562
+     new-instance v0, Landroid/content/IntentFilter;
+@@ -5208,7 +5208,9 @@
+ 
+     iget-object v2, p0, Lcom/mediatek/wfo/impl/ImsLocationHandler;->mReceiver:Landroid/content/BroadcastReceiver;
+ 
+-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++    const/4 v3, 0x2
++
++    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+ 
+     .line 1569
+     return-void
+-- 
+2.43.0
+

@@ -1,0 +1,6 @@
+service vendor.touch-hal-hormoz /vendor/bin/hw/vendor.lineage.touch-service.hormoz
+    interface aidl vendor.lineage.touch.IHighTouchPollingRate/default
+    class hal
+    user system
+    group system
+    shutdown critical
