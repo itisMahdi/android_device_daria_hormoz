@@ -66,10 +66,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
-ifeq ($(PRODUCT_SYSTEM_PARTITIONS_FILE_SYSTEM_TYPE),ext4)
--include vendor/lineage/config/BoardConfigReservedSize.mk
-endif
-
 # Kernel
 TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/Image.gz
 PRODUCT_COPY_FILES += \
@@ -147,6 +143,8 @@ BOARD_USES_METADATA_PARTITION := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6897
+
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
